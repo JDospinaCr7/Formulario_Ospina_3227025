@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro - DIAN</title>
+    <!-- Importamos la fuente Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Importamos iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="form-container">
+            <div class="form-header">
+                <h2><i class="fas fa-user-plus"></i> Registro de Usuario</h2>
+                <p>Completa tus datos para continuar</p>
+            </div>
+            <form action="#" method="POST">
+                
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="nombre"><i class="fas fa-user"></i> Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="apellido"><i class="fas fa-user"></i> Apellido</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Ej. Pérez" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="tipo_documento"><i class="fas fa-id-card"></i> Tipo de Documento</label>
+                        <select id="tipo_documento" name="tipo_documento" required>
+                            <option value="" disabled selected>Seleccione tipo...</option>
+                            <option value="CC">Cédula de Ciudadanía</option>
+                            <option value="CE">Cédula de Extranjería</option>
+                            <option value="NIT">NIT</option>
+                            <option value="PP">Pasaporte</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="dni"><i class="fas fa-hashtag"></i> Número de Identificación</label>
+                        <input type="text" id="dni" name="dni" placeholder="Ej. 123456789" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="fecha_nacimiento"><i class="fas fa-calendar-alt"></i> Fecha de Nacimiento</label>
+                        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="telefono"><i class="fas fa-phone"></i> Número de Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej. 3001234567" required>
+                    </div>
+                </div>
+
+                <div class="input-group full-width">
+                    <label for="email"><i class="fas fa-envelope"></i> Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="juan.perez@email.com" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="pais_domicilio"><i class="fas fa-globe-americas"></i> País de Domicilio</label>
+                        <select id="pais_domicilio" name="pais_domicilio" required>
+                            <option value="" disabled>Seleccione país...</option>
+                            <option value="169" selected>Colombia</option>
+                            <option value="063">Argentina</option>
+                            <option value="245">España</option>
+                            <option value="249">Estados Unidos</option>
+                            <option value="493">México</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="ciudad_domicilio"><i class="fas fa-city"></i> Ciudad de Domicilio</label>
+                        <select id="ciudad_domicilio" name="ciudad_domicilio" required>
+                            <option value="" disabled selected>Seleccione ciudad...</option>
+                            <!-- Ciudades de Colombia -->
+                            <option value="11001">Bogotá, D.C. (Colombia)</option>
+                            <option value="05001">Medellín (Colombia)</option>
+                            <option value="76001">Cali (Colombia)</option>
+                            <!-- Ciudades de Argentina -->
+                            <option value="AR-C">Buenos Aires (Argentina)</option>
+                            <option value="AR-X">Córdoba (Argentina)</option>
+                            <option value="AR-S">Rosario (Argentina)</option>
+                            <!-- Ciudades de España -->
+                            <option value="ES-M">Madrid (España)</option>
+                            <option value="ES-B">Barcelona (España)</option>
+                            <option value="ES-SE">Sevilla (España)</option>
+                            <!-- Ciudades de Estados Unidos -->
+                            <option value="US-NY">Nueva York (EE. UU.)</option>
+                            <option value="US-LA">Los Ángeles (EE. UU.)</option>
+                            <option value="US-MIA">Miami (EE. UU.)</option>
+                            <!-- Ciudades de México -->
+                            <option value="MX-CMX">Ciudad de México (México)</option>
+                            <option value="MX-JAL">Guadalajara (México)</option>
+                            <option value="MX-NL">Monterrey (México)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group checkbox-group full-width">
+                    <input type="checkbox" id="tratamiento_datos" name="tratamiento_datos" required>
+                    <label for="tratamiento_datos">Acepto el tratamiento de mis datos personales y la política de privacidad.</label>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Completar Registro
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
